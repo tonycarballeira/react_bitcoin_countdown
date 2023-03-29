@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    
-  
-  </head>
 
-
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-
-    <script>
-      const request = new XMLHttpRequest();
+const request = new XMLHttpRequest();
 request.open("GET","https://blockchain.info/stats?format=json");
 request.send();
 
@@ -20,7 +7,6 @@ const showDays = document.getElementById('showDays');
 const showHours = document.getElementById('showHours');
 const showMinutes = document.getElementById('showMinutes');
 const showSeconds = document.getElementById('showSeconds');
-
 
 let jsonObject = {};
 
@@ -37,13 +23,12 @@ request.onload = function(){
     const minsBetween = jsonObject.minutes_between_blocks;
     const minsLeft = blocksLeft * 9.267;
     secondsLeft = minsLeft * 60;
+    console.log(jsonObject.minutes_between_blocks);
 }
-
 
 function setTime(){
     secondsLeft = secondsLeft - 1;
     console.log(secondsLeft);
-    
     
     const days = Math.floor(secondsLeft / 3600 / 24);
     const hours = Math.floor(secondsLeft / 3600) % 24;
@@ -71,6 +56,3 @@ function formatTime(time) {
     }
         
 }
-    </script>
-  </body>
-</html>
