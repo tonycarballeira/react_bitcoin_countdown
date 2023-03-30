@@ -5,6 +5,7 @@ import axios from 'axios'
 import Coins from './components/Coins'
 import Navbar from './components/Navbar'
 import { Routes, Route } from 'react-router-dom'
+import Coin from './routes/Coin'
 
 // coingecko api: https://www.coingecko.com/en/api/documentation
 
