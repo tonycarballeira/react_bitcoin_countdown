@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState, useEffect, useRef} from 'react'
 import axios from 'axios';
+import {BsFillFileArrowDownFill} from 'react-icons/bs'
 
 
 const Timer = () => {
@@ -64,7 +65,7 @@ const Timer = () => {
         <div className="w-full h-screen bg-black bg-opacity-70">
             <div className="w-full h-full flex flex-col items-start justify-between container mx-auto py-8 px-8 lg:px-4 xl:px-0">
                 <div className="flex-1 flex flex-col items-start justify-center">
-                    <h1 className="text-6xl lg:text-7xl xl:text-8xl text-gray-200 tracking-wider font-bold font-serif mt-12 text-center md:text-left">Bitcoin <span className="text-yellow-300">Halving</span> Countdown</h1>
+                    <h1 className="text-6xl lg:text-7xl xl:text-8xl text-gray-200 tracking-wider font-bold mt-12 text-center md:text-left">Bitcoin <span className="text-yellow-300">Halving</span> Countdown</h1>
                     
                     <div className="mt-12 flex flex-col items-center mt-8 ml-2">
                         <p className="text-gray-300 uppercase text-sm">Time left until the halving</p>
@@ -87,6 +88,11 @@ const Timer = () => {
                             <div className="flex flex-col items-center px-4">
                                 <span x-text="time().seconds" className="text-4xl lg:text-5xl text-gray-200">{formatTime(seconds)}</span>
                                 <span className="text-gray-400 mt-2">Seconds</span>
+                            </div>
+                            <span className="w-[1px] h-24 bg-gray-400"></span>
+                            <div className="flex flex-col items-center px-4">
+                                <span x-text="time().seconds" className="text-4xl lg:text-5xl text-gray-200"><a href="#search"><BsFillFileArrowDownFill/></a></span>
+                                <span className="text-gray-400 mt-2">Coin Search</span>
                             </div>
                         </div>                      
                     </div>

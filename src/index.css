@@ -9,6 +9,8 @@
     margin: 0;
     padding: 0;
   }
+
+  html {scroll-behavior: smooth;}
   
   body {
     margin: 0;
@@ -18,7 +20,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   
-    background-color: #26272b;
+    background-color: #0b373c;
     color: #f4f4f4;
   }
   
