@@ -3,6 +3,7 @@ import Timer from './sections/timer/Timer';
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Coins from './components/Coins'
+import Navbar from './components/Navbar'
 
 // coingecko api: https://www.coingecko.com/en/api/documentation
 
@@ -23,6 +24,7 @@ function App() {
   return (
     <>
       <Timer/>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Coins coins={coins} />} />
         <Route path='/coin' element={<Coin />}>
