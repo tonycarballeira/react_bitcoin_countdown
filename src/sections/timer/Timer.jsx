@@ -90,13 +90,13 @@ const Timer = () => {
                             </div>
                         </div>                      
                     </div>
-                    {/* <div className="flex flex-col items-center space-y-4 mt-16 px-6">
-                        <p className="text-gray-300 uppercase text-sm">Notify me when it's here</p>
-                        <form className="w-full flex items-center">
-                            <input type="email" name="email" id="email" className="w-72 p-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-300 rounded-tl rounded-bl text-sm" placeholder="Email" autocomplete="off" />
-                            <button className="bg-blue-600 py-2 px-6 text-gray-100 border border-blue-600 rounded-tr rounded-br text-sm">Subscribe</button>
-                        </form> 
-                    </div> */}
+                        {/* <div className="flex flex-col items-center space-y-4 mt-16 px-6">
+                            <p className="text-gray-300 uppercase text-sm">Notify me when it's here</p>
+                            <form className="w-full flex items-center">
+                                <input type="email" name="email" id="email" className="w-72 p-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-300 rounded-tl rounded-bl text-sm" placeholder="Email" autocomplete="off" />
+                                <button className="bg-blue-600 py-2 px-6 text-gray-100 border border-blue-600 rounded-tr rounded-br text-sm">Subscribe</button>
+                            </form> 
+                        </div> */}
                 </div>
                 
             </div>
