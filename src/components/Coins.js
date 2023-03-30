@@ -1,6 +1,7 @@
 import React from 'react'
+import CoinItem from './CoinItem'
 
-const Coins = () => {
+const Coins = (props) => {
   return (
     <div className='container'>
             <div>
@@ -12,7 +13,15 @@ const Coins = () => {
                     <p className='hide-mobile'>Volume</p>
                     <p className='hide-mobile'>Mkt Cap</p>
                 </div>
+                
+                {props.coins.map(coins => {
+                    return (
+                        <Link to={`/coin/${coins.id}`} element={<Coin />} key={coins.id}>
+                            <CoinItem coins={coins} />
+                        </Link>
 
+                    )
+                })}
             </div>
         </div>
   )
