@@ -4,10 +4,8 @@ import axios from 'axios';
 
 
 const Timer = () => {
-    const initial_timer = 0;
-    const interval = useRef();
 
-    const [secondsLeft, setSecondsLeft] = useState(initial_timer);
+    const [secondsLeft, setSecondsLeft] = useState(0);
     const [data, setData] = useState([]);
 
     const [days, setDays] = useState(0);
@@ -77,19 +75,19 @@ const Timer = () => {
         <div class="countdown-container">
             <div className="days-c"> 
                 <p className="count-item" id="showDays"></p>
-                <span>{days}</span>
+                <span>{formatTime(days)}</span>
             </div>
             <div class="hours-c"> 
                 <p class="count-item" id="showHours"></p>
-                <span>{hours}</span>
+                <span>{formatTime(hours)}</span>
             </div>
             <div class="minutes-c"> 
                 <p class="count-item" id="showMinutes"></p>
-                <span>{minutes}</span>
+                <span>{formatTime(minutes)}</span>
             </div>
             <div class="seconds-c"> 
                 <p class="count-item" id="showSeconds"></p>
-                <span>{seconds}</span>
+                <span>{formatTime(seconds)}</span>
             </div>
                 
         </div>
