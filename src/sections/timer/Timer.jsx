@@ -31,7 +31,6 @@ const Timer = () => {
         
     },[]);
 
-
     const updateCount = () => {
         timer = setInterval(() => {
             console.log(secondsLeft);
@@ -60,38 +59,48 @@ const Timer = () => {
                 
     }
 
-    
-
-    // console.log(days);
-    // console.log(hours);
-    // console.log(minutes);
-    // console.log(seconds);
-
   return (
-    <div>
-
-        <h1>Bitcoin Halving</h1>
-
-        <div class="countdown-container">
-            <div className="days-c"> 
-                <p className="count-item" id="showDays"></p>
-                <span>{formatTime(days)}</span>
-            </div>
-            <div class="hours-c"> 
-                <p class="count-item" id="showHours"></p>
-                <span>{formatTime(hours)}</span>
-            </div>
-            <div class="minutes-c"> 
-                <p class="count-item" id="showMinutes"></p>
-                <span>{formatTime(minutes)}</span>
-            </div>
-            <div class="seconds-c"> 
-                <p class="count-item" id="showSeconds"></p>
-                <span>{formatTime(seconds)}</span>
-            </div>
+    <div className="w-full h-screen" style={{backgroundImage: "url('https://vojislavd.com/ta-template-demo/assets/img/coming-soon.jpg')"}}>
+        <div className="w-full h-screen bg-black bg-opacity-70">
+            <div className="w-full h-full flex flex-col items-start justify-between container mx-auto py-8 px-8 lg:px-4 xl:px-0">
+                <div className="flex-1 flex flex-col items-start justify-center">
+                    <h1 className="text-6xl lg:text-7xl xl:text-8xl text-gray-200 tracking-wider font-bold font-serif mt-12 text-center md:text-left">Bitcoin <span className="text-yellow-300">Halving</span> Countdown</h1>
+                    
+                    <div className="mt-12 flex flex-col items-center mt-8 ml-2">
+                        <p className="text-gray-300 uppercase text-sm">Time left until the halving</p>
+                        <div className="flex items-center justify-center space-x-4 mt-4" x-data="timer(new Date().setDate(new Date().getDate() + 1))" x-init="init();">
+                            <div className="flex flex-col items-center px-4">
+                                <span x-text="time().days" className="text-4xl lg:text-5xl text-gray-200">{formatTime(days)}</span>
+                                <span className="text-gray-400 mt-2">Days</span>
+                            </div>
+                            <span className="w-[1px] h-24 bg-gray-400"></span>
+                            <div className="flex flex-col items-center px-4">
+                                <span x-text="time().hours" className="text-4xl lg:text-5xl text-gray-200">{formatTime(hours)}</span>
+                                <span className="text-gray-400 mt-2">Hours</span>
+                            </div>
+                            <span className="w-[1px] h-24 bg-gray-400"></span>
+                            <div className="flex flex-col items-center px-4">
+                                <span x-text="time().minutes" className="text-4xl lg:text-5xl text-gray-200">{formatTime(minutes)}</span>
+                                <span className="text-gray-400 mt-2">Minutes</span>
+                            </div>
+                            <span className="w-[1px] h-24 bg-gray-400"></span>
+                            <div className="flex flex-col items-center px-4">
+                                <span x-text="time().seconds" className="text-4xl lg:text-5xl text-gray-200">{formatTime(seconds)}</span>
+                                <span className="text-gray-400 mt-2">Seconds</span>
+                            </div>
+                        </div>                      
+                    </div>
+                    {/* <div className="flex flex-col items-center space-y-4 mt-16 px-6">
+                        <p className="text-gray-300 uppercase text-sm">Notify me when it's here</p>
+                        <form className="w-full flex items-center">
+                            <input type="email" name="email" id="email" className="w-72 p-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-300 rounded-tl rounded-bl text-sm" placeholder="Email" autocomplete="off" />
+                            <button className="bg-blue-600 py-2 px-6 text-gray-100 border border-blue-600 rounded-tr rounded-br text-sm">Subscribe</button>
+                        </form> 
+                    </div> */}
+                </div>
                 
+            </div>
         </div>
-        
     </div>
   )
 }
