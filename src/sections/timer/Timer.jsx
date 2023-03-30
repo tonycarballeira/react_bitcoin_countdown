@@ -33,34 +33,36 @@ const Timer = () => {
         
     },[]);
 
-    
+
+    const updateCount = () => {
+        timer = setInterval(() => {
+            console.log(secondsLeft);
+            setSecondsLeft((t) => t - 1);
+            setDays(Math.floor(secondsLeft / 3600 / 24));
+            setHours(Math.floor(secondsLeft / 3600) % 24);
+            setMinutes(Math.floor(secondsLeft / 60) % 24);
+            setSeconds(Math.floor(secondsLeft) % 60); 
+        }, 1000)
+    }
 
     useEffect(() => {
-        function handleTimer() {
-          interval.current = setInterval(() => {
-            setSecondsLeft((count) => count - 1);
-          }, 1000);
-        }
-        handleTimer();
-      }, [secondsLeft]);
+        updateCount()     
+        return () => clearInterval(timer)
+    }, [secondsLeft])
 
-    // const updateCount = () => {
-    //     timer = !timer && setInterval(() => {
-    //         console.log(secondsLeft);
-    //         setSecondsLeft(secondsLeft => secondsLeft - 1);       
-    //     }, 1000)
-    // }
-
-    // useEffect(() => {
-    //     updateCount()
+    const formatTime = (time) => {
         
-    //     return () => clearInterval(timer)
-    // }, [])
+        if (time < 10 && time > 0) {
+            return "" + 0 + time;
+        }   else if (time < 0) {
+            return "";
+        } else {
+            return time;
+        }
+                
+    }
 
-    // setDays(Math.floor(secondsLeft / 3600 / 24));
-    // setHours(Math.floor(secondsLeft / 3600) % 24);
-    // setMinutes(Math.floor(secondsLeft / 60) % 24);
-    // setSeconds(Math.floor(secondsLeft) % 60); 
+    
 
     // console.log(days);
     // console.log(hours);
@@ -79,11 +81,11 @@ const Timer = () => {
             </div>
             <div class="hours-c"> 
                 <p class="count-item" id="showHours"></p>
-                <span>Hours</span>
+                <span>{hours}</span>
             </div>
             <div class="minutes-c"> 
                 <p class="count-item" id="showMinutes"></p>
-                <span>Minutes</span>
+                <span>{minutes}</span>
             </div>
             <div class="seconds-c"> 
                 <p class="count-item" id="showSeconds"></p>
