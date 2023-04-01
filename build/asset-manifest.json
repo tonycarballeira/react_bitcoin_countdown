@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react_bitcoin_countdown/static/css/main.9561a555.css",
+    "main.js": "/react_bitcoin_countdown/static/js/main.4e76640e.js",
+    "index.html": "/react_bitcoin_countdown/index.html",
+    "main.9561a555.css.map": "/react_bitcoin_countdown/static/css/main.9561a555.css.map",
+    "main.4e76640e.js.map": "/react_bitcoin_countdown/static/js/main.4e76640e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9561a555.css",
+    "static/js/main.4e76640e.js"
+  ]
+}
