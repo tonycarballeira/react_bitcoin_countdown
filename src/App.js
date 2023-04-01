@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Coins from './components/Coins'
 import Navbar from './components/Navbar'
-import { Routes, Route, HashRouter } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Coin from './routes/Coin'
 
 // coingecko api: https://www.coingecko.com/en/api/documentation
@@ -26,15 +26,13 @@ function App() {
   return (
     <>
       <Timer/>
-      <HashRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Coins coins={coins} />} />
-          <Route path='/coin' element={<Coin />}>
-            <Route path=':coinId' element={<Coin />} />
-          </Route>
-        </Routes>
-      </HashRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Coins coins={coins} />} />
+        <Route path='/coin' element={<Coin />}>
+          <Route path=':coinId' element={<Coin />} />
+        </Route>
+      </Routes>
     
     </>
     
