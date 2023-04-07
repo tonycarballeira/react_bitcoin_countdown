@@ -2,6 +2,8 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import DOMPurify from 'dompurify'
+import {Link} from 'react-router-dom'
+import {RiArrowGoBackFill} from "react-icons/ri"
 
 import './Coin.css'
 
@@ -25,6 +27,11 @@ const Coin = () => {
         <div>
             <div className='coin-container'>
                 <div className='content'>
+                    <Link to='/'>
+                        <div>
+                            <RiArrowGoBackFill size={25}/>
+                        </div>
+                    </Link>
                     <h1>{coin.name}</h1>
                 </div>
                 <div className='content'>
