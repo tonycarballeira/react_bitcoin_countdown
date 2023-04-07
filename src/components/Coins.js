@@ -8,9 +8,6 @@ import './Coins.css'
 const Coins = (props) => {
 
     const [query, setQuery] = useState("");
-    const coinList = props.coins;
-    const filteredCoins = coinList.filter(coin => coin.name.includes(query));
-
 
   return (
     <>
@@ -42,7 +39,6 @@ const Coins = (props) => {
     
                             )
                         } else if (coins.name.toLowerCase().includes(query)){
-                            console.log(coins.name);
                             return (
                                 <Link to={`/coin/${coins.id}`} element={<Coin />} key={coins.id}>
                                     <CoinItem coins={coins} />
