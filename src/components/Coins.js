@@ -16,8 +16,8 @@ const Coins = (props) => {
         <div className='container'>
 
             <div className='searchdiv'>
-                <label>Search</label>
-                <input className='searchbar' type="text" onChange={e => setQuery(e.target.value)} />
+                
+                <input className='searchbar' placeholder="search coins" type="text" onChange={e => setQuery(e.target.value)} />
             </div>
 
             <div>
