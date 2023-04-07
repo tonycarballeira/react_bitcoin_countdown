@@ -61,8 +61,8 @@ const Timer = () => {
     }
 
   return (
-    <div className="w-full h-screen" style={{backgroundImage: "url('https://vojislavd.com/ta-template-demo/assets/img/coming-soon.jpg')"}}>
-        <div className="w-full h-screen bg-black bg-opacity-70">
+    <div className="w-full" >
+        <div className="w-full">
             <div className="w-full h-full flex flex-col items-start justify-between container mx-auto py-8 px-8 lg:px-4 xl:px-0">
                 <div className="flex-1 flex flex-col items-start justify-center">
                     <h1 className="text-6xl lg:text-7xl xl:text-8xl text-gray-200 tracking-wider font-bold mt-12 text-center md:text-left">Bitcoin <span className="text-yellow-300">Halving</span> Countdown</h1>
