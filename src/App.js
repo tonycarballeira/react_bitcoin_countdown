@@ -7,6 +7,8 @@ import Navbar from './components/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import Coin from './routes/Coin'
 
+// deployed here: https://grubby-rice.surge.sh/
+
 // coingecko api: https://www.coingecko.com/en/api/documentation
 
 function App() {

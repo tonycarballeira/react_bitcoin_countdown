@@ -1,6 +1,19 @@
 .container {
     max-width: 1140px;
     margin: auto;
+    text-align: center;
+}
+
+.searchbar {
+    color: #18191b;
+}
+
+.searchdiv {
+    margin-top: 30px;
+}
+
+.searchdiv > label {
+    margin-right: 5px;
 }
 
 .heading {
